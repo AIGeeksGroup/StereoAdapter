@@ -1,2 +1,1 @@
-# StereoAdapter
-StereoAdapter: Adapting Stereo Depth Estimation to Underwater Scenes
+# StereoAdapter: Adapting Stereo Depth Estimation to Underwater Scenes
