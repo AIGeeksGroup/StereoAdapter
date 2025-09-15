@@ -1,0 +1,458 @@
+/* CSS Document - GA Style */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+  font-family: 'Open-Sans', sans-serif;
+  font-weight: 300;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  width: 1100px;
+  padding: 25px 50px;
+  margin: 25px auto;
+  background-color: white;
+  box-shadow: 0px 0px 10px #999;
+  border-radius: 15px;
+  font-family: "Google Sans";
+}
+
+.contentblock {
+  width: 1050px;
+  margin: 0 auto;
+  padding: 0;
+  border-spacing: 25px 0;
+}
+
+.contentblock td {
+  background-color: #fff;
+  padding: 25px 50px;
+  vertical-align: top;
+  box-shadow: 0px 0px 10px #999;
+  border-radius: 15px;
+}
+
+#gif-display {
+  width: 1050px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+#contentWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#prevButton, #nextButton {
+  padding: 10px;
+  background-color: #ddd;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 2em;
+}
+
+#navBar {
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+}
+
+.navDot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: #ddd;
+  border-radius: 50%;
+}
+
+.navDotSelected {
+  background-color: #555;
+}
+
+.navDot:hover {
+  background-color: #aaa;
+  cursor: pointer;
+}
+
+.nav-arrows {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav-button {
+  padding: 10px;
+  background-color: #cfcece;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#prevArrow {
+  transform: rotate(180deg);
+}
+
+#nextArrow {
+}
+
+a, a:visited {
+  color: #224b8d;
+  font-weight: 300;
+}
+
+#authors {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+#authors span {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+#authors sup {
+  font-size: 14px;
+  margin-right: -2px;
+  margin-left: 1px;
+}
+
+#authors .institution {
+  display: block;
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+#authors .institution a {
+  margin-right: 15px;
+  color: black;
+  text-decoration: underline gray;
+}
+
+#authors .conference {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 300;
+  color: black;
+}
+
+#authors a {
+  margin: 0 10px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 35px;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 300;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+code {
+  display: block;
+  padding: 10px;
+  margin: 10px 10px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  font-family: monospace;
+}
+
+p {
+  line-height: 25px;
+  text-align: justify;
+}
+
+p code {
+  display: inline;
+  padding: 0;
+  margin: 0;
+}
+
+#teasers {
+  margin: 0 auto;
+}
+
+#teasers td {
+  margin: 0 auto;
+  text-align: center;
+  padding: 5px;
+}
+
+#teasers img {
+  width: 250px;
+}
+
+#results img {
+  width: 133px;
+}
+
+#seeintodark {
+  margin: 0 auto;
+}
+
+#sift {
+  margin: 0 auto;
+}
+
+#sift img {
+  width: 250px;
+}
+
+.downloadpaper {
+  padding-left: 20px;
+  float: right;
+  text-align: center;
+}
+
+.downloadpaper a {
+  font-weight: bold;
+  text-align: center;
+}
+
+.teaser-img {
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.teaser-gif {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.summary-img {
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.video-iframe {
+  width: 1100px;
+  height: 800px;
+  margin: auto;
+  display: block;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  flex-basis: 40%;
+}
+
+.text {
+  font-size: 20px;
+  padding-left: 20px;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.boxshadow {
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 2px 2px 5px #888888;
+}
+
+.spacertr {
+  height: 8px;
+}
+
+.spacertd {
+  width: 40px;
+}
+
+/* Custom styles for VGGT project */
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 2rem 0;
+}
+
+.hero-body {
+  padding: 2rem 1.5rem;
+}
+
+.publication-title {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.publication-authors {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.publication-links {
+  margin-top: 1.5rem;
+}
+
+.link-block {
+  margin: 0.5rem;
+}
+
+.external-link {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.external-link:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.section {
+  padding: 2rem 0;
+}
+
+.model-viewer-container {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.thumbnail-container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 30px;
+  padding: 10px 0;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  align-items: center;
+  justify-content: center;
+}
+
+.thumbnail-container img, 
+.thumbnail-container video {
+  flex: 0 0 auto;
+  width: auto;
+  height: 120px;
+  object-fit: cover;
+  max-width: none;
+  transition: all 0.3s ease;
+  border: 3px solid transparent;
+  cursor: pointer;
+}
+
+.thumbnail-selected {
+  transform: scale(1.2);
+  border: 6px solid #79b4f2 !important; 
+  box-shadow: 0 0 10px rgba(121, 180, 242, 0.5);
+  z-index: 10;
+  position: relative;
+}
+
+.model-container {
+  display: flex;
+  gap: 20px;
+  margin: 2rem 0;
+  justify-content: center;
+}
+
+.model-wrapper-comparison {
+  flex: 1;
+  max-width: 300px;
+  text-align: center;
+}
+
+.model-label {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.dropdown {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: white;
+  font-size: 1rem;
+}
+
+/* Responsive design */
+@media (max-width: 1300px) {
+  .content {
+    width: 95%;
+    padding: 20px 30px;
+  }
+  
+  .contentblock {
+    width: 95%;
+  }
+  
+  #gif-display {
+    width: 95%;
+  }
+  
+  .video-iframe {
+    width: 95%;
+    height: auto;
+  }
+}
+
+@media (max-width: 1200px) {
+  .content {
+    width: 90%;
+    padding: 20px 30px;
+  }
+  
+  .model-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .model-wrapper-comparison {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    width: 95%;
+    padding: 15px 20px;
+    margin: 15px auto;
+  }
+  
+  h1 {
+    font-size: 28px;
+  }
+  
+  h2 {
+    font-size: 24px;
+  }
+  
+  .thumbnail-container img,
+  .thumbnail-container video {
+    height: 100px;
+  }
+  
+  .hero-body {
+    padding: 1rem;
+  }
+}

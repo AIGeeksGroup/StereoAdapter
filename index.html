@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+    content="StereoAdapter: Adapting Stereo Depth Estimation to Underwater Scenes">
+  <meta name="keywords" content="Stereo Depth Estimation, Underwater, Robotics">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>StereoAdapter: Adapting Stereo Depth Estimation to Underwater Scenes</title>
+
+  <meta property="og:title" content="STream3R" />
+  <meta property="og:description"
+    content="StereoAdapter: Adapting Stereo Depth Estimation to Underwater Scenes" />
+  <meta property="twitter:card" content="summary" />
+  <meta property="twitter:title" content="StereoAdapter: Adapting Stereo Depth Estimation to Underwater Scenes" />
+  <meta property="twitter:description"
+    content="StereoAdapter: Adapting Stereo Depth Estimation to Underwater Scenes" />
+
+  <!-- MathJax library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+  
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="./static/css/dreambooth-style.css">
+</head>
+
+<body>
+  <div class="content">
+    <h1><strong><b>StereoAdapter:</b> Adapting Stereo Depth Estimation to <br>Underwater Scenes</h1>
+
+    <p id="authors">
+      <span>
+          <a href="#">Zhengri Wu<sup>1*</sup></a></span>
+      <span>
+        <a href="#">Yiran Wang<sup>1*</sup></a></span>
+      <span>
+        <a href="#">Yu Wen<sup>1*</sup></a></span>
+      <span>
+          <a href="https://steve-zeyu-zhang.github.io/">Zeyu Zhang<sup>2*†</sup></a></span>
+      <span>
+        <a href="#">Biao Wu<sup>3</sup></a></span>
+      <span>
+          <a href="#">Ling Chen<sup>3</sup></a></span>
+      <span>
+          <a href="https://ha0tang.github.io/">Hao Tang<sup>2‡</sup></a></span>
+      <br>
+      <span class="institution"><sup>1 </sup> Australian Centre for Robotics&nbsp;&nbsp;&nbsp;
+              <sup>2 </sup>Peking University&nbsp;&nbsp;&nbsp;
+              <sup>3 </sup>Australian Artificial Intelligence Institute
+              <br>
+              <sup>* </sup> Equal contribution.&nbsp;&nbsp;&nbsp;
+              <sup>† </sup> Project lead.&nbsp;&nbsp;&nbsp;
+              <sup>‡ </sup> Corresponding author.
+    </p>
+
+    <!-- <p style="text-align: center; font-size: 1.5rem;">
+      Conference 2026
+    </p> -->
+    
+    <font size="+2">
+      <p style="text-align: center;">
+        <a href="#" target="_blank">[Paper]</a> &nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://github.com/AIGeeksGroup/StereoAdapter" target="_blank">[Code]</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://huggingface.co/datasets/AIGeeksGroup/UW-StereoDepth-40K" target="_blank">[Dataset]</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://huggingface.co/AIGeeksGroup/StereoAdapter" target="_blank">[Model]</a>
+      </p>
+    </font>
+
+    <p style="text-align:center">
+      <font size="+1">
+        <b>TL;DR:</b> StereoAdapter is a self-supervised adaptive model that allows robust underwater depth estimation.
+      </font>
+  </p>
+
+    <div style="text-align: center;">
+      <video autoplay muted loop playsinline controls
+            width="95%" 
+            style="border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+        <source src="static/assets/teaser_h264.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  
+
+  </div>
+
+  <div class="content">
+    <h2 style="text-align:center;">Real World Results</h2>
+    <p style="text-align:center">
+      We evaluate StereoAdapter on a BlueROV2 across three obstacle layouts and three motion trajectories.
+    </p>
+
+    
+      
+  </div>
+
+
+  <div class="content">
+    <h2 style="text-align:center;">Abstract</h2>
+    <p>
+      We present <b>STream3R</b>, a novel approach to 3D reconstruction that reformulates pointmap prediction as a decoder-only Transformer problem. Existing state-of-the-art methods for multi-view reconstruction either depend on expensive global optimization or rely on simplistic memory mechanisms that scale poorly with sequence length. In contrast, <b>STream3R</b> introduces an streaming framework that processes image sequences efficiently using causal attention, inspired by advances in modern language modeling. By learning geometric priors from large-scale 3D datasets, <b></b>STream3R</b> generalizes well to diverse and challenging scenarios, including dynamic scenes where traditional methods often fail. Extensive experiments show that our method consistently outperforms prior work across both static and dynamic scene benchmarks. Moreover, <b>STream3R</b> is inherently compatible with LLM-style training infrastructure, enabling efficient large-scale pretraining and fine-tuning for various downstream 3D tasks. Our results underscore the potential of causal Transformer models for online 3D perception, paving the way for real-time 3D understanding in streaming environments.
+    </p>
+    <img class="summary-img" src="static/assets/teaser.png" style="width:90%;">
+  </div>
+
+  <div class="content">
+    <h2 style="text-align:center;">Method</h2>
+    <p>
+      Built on a causal transformer, STREAM3R processes streaming images
+      sequentially for 3D reconstruction. Each input image is first tokenized using a shared-weight ViT
+      encoder, and the resulting tokens are passed to our causal decoder. Each decoder layer begins with
+      frame-wise self-attention. For subsequent views, the model applies causal attention to the memory 
+      tokens cached from previous observations. The outputs include point maps along with confidence maps in both world and camera
+      coordinate systems, as long as the camera pose as shown on the right.
+    </p>
+    <br>
+    <img class="summary-img" src="static/assets/pipeline.png" style="width:90%;">
+    <h4>
+      <center>Method Overview of STream3R.</center>
+    </h4>
+  </div>
+
+  <div class="content">
+    <h2>BibTex</h2>
+    <code> @article{stream3r2025,<br>
+  &nbsp;&nbsp;title={STream3R: Scalable Sequential 3D Reconstruction with Causal Transformer},<br>
+  &nbsp;&nbsp;author={Lan, Yushi and Luo, Yihang and Hong, Fangzhou and Zhou, Shangchen and Chen, Honghua and Lyu, Zhaoyang and Yang, Shuai and Dai, Bo and Loy, Chen Change and Pan, Xingang},<br>
+  &nbsp;&nbsp;booktitle={arXiv preprint arXiv:2508.10893},<br>
+  &nbsp;&nbsp;year={2025}<br>
+  } </code>
+  </div>
+
+  <div class="content">
+    <p style="text-align:center"><strong>StereoAdapter: Adapting Stereo Depth Estimation to Underwater Scenes</strong></p>
+  </div>
+
+  
+</body>
+
+</html>
+
