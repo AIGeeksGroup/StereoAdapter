@@ -93,37 +93,430 @@
       We evaluate StereoAdapter on a BlueROV2 across three obstacle layouts and three motion trajectories.
     </p>
 
-    
+    <!-- Column headers -->
+    <div class="grid-headers">
+      <div>BEV</div>
+      <div>Right Camera</div>
+      <div>Left Camera</div>
+      <div>Ground Truth</div>
+      <div>StereoAdapter</div>
+    </div>
+
+    <h3 style="text-align:center;">Layout #1</h3>
+
+    <!-- Video grid -->
+    <div class="video-grid">
+      <!-- 5 video blocks (5 × 1) -->
+
+          <div class="video-block">
+              <video controls autoplay muted loop>
+              <source src="static/assets/demo/BEV/11.mp4" type="video/mp4">
+              </video>
+              <!-- <div class="figure-caption">Video 2 caption here</div> -->
+          </div>
+
+          <div class="video-block">
+              <video controls autoplay muted loop>
+              <source src="static/assets/demo/Ego/11_r_color.mp4" type="video/mp4">
+              </video>
+              <!-- <div class="figure-caption">Video 1 caption here</div> -->
+          </div>
+      
+          <div class="video-block">
+              <video controls autoplay muted loop>
+              <source src="static/assets/demo/Ego/11_l_color.mp4" type="video/mp4">
+              </video>
+              <!-- <div class="figure-caption">Video 2 caption here</div> -->
+          </div>
+
+          <div class="video-block">
+              <video controls autoplay muted loop>
+              <source src="static/assets/demo/GT/11.mp4" type="video/mp4">
+              </video>
+              <!-- <div class="figure-caption">Video 2 caption here</div> -->
+          </div>
+
+          <div class="video-block">
+            <video controls autoplay muted loop>
+            <source src="static/assets/demo/inference/11.mp4" type="video/mp4">
+            </video>
+            <!-- <div class="figure-caption">Video 2 caption here</div> -->
+        </div>
+
+      </div>
+
+
+    <!-- Video grid -->
+    <div class="video-grid">
+      <!-- 5 video blocks (5 × 1) -->
+
+          <div class="video-block">
+              <video controls autoplay muted loop>
+              <source src="static/assets/demo/BEV/12b.mp4" type="video/mp4">
+              </video>
+              <!-- <div class="figure-caption">Video 2 caption here</div> -->
+          </div>
+
+          <div class="video-block">
+              <video controls autoplay muted loop>
+              <source src="static/assets/demo/Ego/12b_r_color.mp4" type="video/mp4">
+              </video>
+              <!-- <div class="figure-caption">Video 1 caption here</div> -->
+          </div>
+      
+          <div class="video-block">
+              <video controls autoplay muted loop>
+              <source src="static/assets/demo/Ego/12b_l_color.mp4" type="video/mp4">
+              </video>
+              <!-- <div class="figure-caption">Video 2 caption here</div> -->
+          </div>
+
+          <div class="video-block">
+              <video controls autoplay muted loop>
+              <source src="static/assets/demo/GT/12b.mp4" type="video/mp4">
+              </video>
+              <!-- <div class="figure-caption">Video 2 caption here</div> -->
+          </div>
+
+          <div class="video-block">
+            <video controls autoplay muted loop>
+            <source src="static/assets/demo/inference/12b.mp4" type="video/mp4">
+            </video>
+            <!-- <div class="figure-caption">Video 2 caption here</div> -->
+        </div>
+
+      </div>
+
+
+      <!-- Video grid -->
+    <div class="video-grid">
+      <!-- 5 video blocks (5 × 1) -->
+
+          <div class="video-block">
+              <video controls autoplay muted loop>
+              <source src="static/assets/demo/BEV/13.mp4" type="video/mp4">
+              </video>
+              <!-- <div class="figure-caption">Video 2 caption here</div> -->
+          </div>
+
+          <div class="video-block">
+              <video controls autoplay muted loop>
+              <source src="static/assets/demo/Ego/13_r_color.mp4" type="video/mp4">
+              </video>
+              <!-- <div class="figure-caption">Video 1 caption here</div> -->
+          </div>
+      
+          <div class="video-block">
+              <video controls autoplay muted loop>
+              <source src="static/assets/demo/Ego/13_l_color.mp4" type="video/mp4">
+              </video>
+              <!-- <div class="figure-caption">Video 2 caption here</div> -->
+          </div>
+
+          <div class="video-block">
+              <video controls autoplay muted loop>
+              <source src="static/assets/demo/GT/13.mp4" type="video/mp4">
+              </video>
+              <!-- <div class="figure-caption">Video 2 caption here</div> -->
+          </div>
+
+          <div class="video-block">
+            <video controls autoplay muted loop>
+            <source src="static/assets/demo/inference/13.mp4" type="video/mp4">
+            </video>
+            <!-- <div class="figure-caption">Video 2 caption here</div> -->
+        </div>
+
+      </div>
+
+      <h3 style="text-align:center;">Layout #2</h3>
+
+        <!-- Video grid -->
+    <div class="video-grid">
+      <!-- 5 video blocks (5 × 1) -->
+
+          <div class="video-block">
+              <video controls autoplay muted loop>
+              <source src="static/assets/demo/BEV/17.mp4" type="video/mp4">
+              </video>
+              <!-- <div class="figure-caption">Video 2 caption here</div> -->
+          </div>
+
+          <div class="video-block">
+              <video controls autoplay muted loop>
+              <source src="static/assets/demo/Ego/17_r_color.mp4" type="video/mp4">
+              </video>
+              <!-- <div class="figure-caption">Video 1 caption here</div> -->
+          </div>
+      
+          <div class="video-block">
+              <video controls autoplay muted loop>
+              <source src="static/assets/demo/Ego/17_l_color.mp4" type="video/mp4">
+              </video>
+              <!-- <div class="figure-caption">Video 2 caption here</div> -->
+          </div>
+
+          <div class="video-block">
+              <video controls autoplay muted loop>
+              <source src="static/assets/demo/GT/17.mp4" type="video/mp4">
+              </video>
+              <!-- <div class="figure-caption">Video 2 caption here</div> -->
+          </div>
+
+          <div class="video-block">
+            <video controls autoplay muted loop>
+            <source src="static/assets/demo/inference/17.mp4" type="video/mp4">
+            </video>
+            <!-- <div class="figure-caption">Video 2 caption here</div> -->
+        </div>
+
+      </div>
+
+        <!-- Video grid -->
+    <div class="video-grid">
+      <!-- 5 video blocks (5 × 1) -->
+
+          <div class="video-block">
+              <video controls autoplay muted loop>
+              <source src="static/assets/demo/BEV/18b.mp4" type="video/mp4">
+              </video>
+              <!-- <div class="figure-caption">Video 2 caption here</div> -->
+          </div>
+
+          <div class="video-block">
+              <video controls autoplay muted loop>
+              <source src="static/assets/demo/Ego/18b_r_color.mp4" type="video/mp4">
+              </video>
+              <!-- <div class="figure-caption">Video 1 caption here</div> -->
+          </div>
+      
+          <div class="video-block">
+              <video controls autoplay muted loop>
+              <source src="static/assets/demo/Ego/18b_l_color.mp4" type="video/mp4">
+              </video>
+              <!-- <div class="figure-caption">Video 2 caption here</div> -->
+          </div>
+
+          <div class="video-block">
+              <video controls autoplay muted loop>
+              <source src="static/assets/demo/GT/18b.mp4" type="video/mp4">
+              </video>
+              <!-- <div class="figure-caption">Video 2 caption here</div> -->
+          </div>
+
+          <div class="video-block">
+            <video controls autoplay muted loop>
+            <source src="static/assets/demo/inference/18b.mp4" type="video/mp4">
+            </video>
+            <!-- <div class="figure-caption">Video 2 caption here</div> -->
+        </div>
+
+      </div>
+
+        <!-- Video grid -->
+    <div class="video-grid">
+      <!-- 5 video blocks (5 × 1) -->
+
+          <div class="video-block">
+              <video controls autoplay muted loop>
+              <source src="static/assets/demo/BEV/19.mp4" type="video/mp4">
+              </video>
+              <!-- <div class="figure-caption">Video 2 caption here</div> -->
+          </div>
+
+          <div class="video-block">
+              <video controls autoplay muted loop>
+              <source src="static/assets/demo/Ego/19_r_color.mp4" type="video/mp4">
+              </video>
+              <!-- <div class="figure-caption">Video 1 caption here</div> -->
+          </div>
+      
+          <div class="video-block">
+              <video controls autoplay muted loop>
+              <source src="static/assets/demo/Ego/19_l_color.mp4" type="video/mp4">
+              </video>
+              <!-- <div class="figure-caption">Video 2 caption here</div> -->
+          </div>
+
+          <div class="video-block">
+              <video controls autoplay muted loop>
+              <source src="static/assets/demo/GT/19.mp4" type="video/mp4">
+              </video>
+              <!-- <div class="figure-caption">Video 2 caption here</div> -->
+          </div>
+
+          <div class="video-block">
+            <video controls autoplay muted loop>
+            <source src="static/assets/demo/inference/19.mp4" type="video/mp4">
+            </video>
+            <!-- <div class="figure-caption">Video 2 caption here</div> -->
+        </div>
+
+      </div>
+
+
+      <h3 style="text-align:center;">Layout #3</h3>
+
+        <!-- Video grid -->
+    <div class="video-grid">
+      <!-- 5 video blocks (5 × 1) -->
+
+          <div class="video-block">
+              <video controls autoplay muted loop>
+              <source src="static/assets/demo/BEV/20.mp4" type="video/mp4">
+              </video>
+              <!-- <div class="figure-caption">Video 2 caption here</div> -->
+          </div>
+
+          <div class="video-block">
+              <video controls autoplay muted loop>
+              <source src="static/assets/demo/Ego/20_r_color.mp4" type="video/mp4">
+              </video>
+              <!-- <div class="figure-caption">Video 1 caption here</div> -->
+          </div>
+      
+          <div class="video-block">
+              <video controls autoplay muted loop>
+              <source src="static/assets/demo/Ego/20_l_color.mp4" type="video/mp4">
+              </video>
+              <!-- <div class="figure-caption">Video 2 caption here</div> -->
+          </div>
+
+          <div class="video-block">
+              <video controls autoplay muted loop>
+              <source src="static/assets/demo/GT/20.mp4" type="video/mp4">
+              </video>
+              <!-- <div class="figure-caption">Video 2 caption here</div> -->
+          </div>
+
+          <div class="video-block">
+            <video controls autoplay muted loop>
+            <source src="static/assets/demo/inference/20.mp4" type="video/mp4">
+            </video>
+            <!-- <div class="figure-caption">Video 2 caption here</div> -->
+        </div>
+
+      </div>
+
+
+        <!-- Video grid -->
+    <div class="video-grid">
+      <!-- 5 video blocks (5 × 1) -->
+
+          <div class="video-block">
+              <video controls autoplay muted loop>
+              <source src="static/assets/demo/BEV/21.mp4" type="video/mp4">
+              </video>
+              <!-- <div class="figure-caption">Video 2 caption here</div> -->
+          </div>
+
+          <div class="video-block">
+              <video controls autoplay muted loop>
+              <source src="static/assets/demo/Ego/21_r_color.mp4" type="video/mp4">
+              </video>
+              <!-- <div class="figure-caption">Video 1 caption here</div> -->
+          </div>
+      
+          <div class="video-block">
+              <video controls autoplay muted loop>
+              <source src="static/assets/demo/Ego/21_l_color.mp4" type="video/mp4">
+              </video>
+              <!-- <div class="figure-caption">Video 2 caption here</div> -->
+          </div>
+
+          <div class="video-block">
+              <video controls autoplay muted loop>
+              <source src="static/assets/demo/GT/21.mp4" type="video/mp4">
+              </video>
+              <!-- <div class="figure-caption">Video 2 caption here</div> -->
+          </div>
+
+          <div class="video-block">
+            <video controls autoplay muted loop>
+            <source src="static/assets/demo/inference/21.mp4" type="video/mp4">
+            </video>
+            <!-- <div class="figure-caption">Video 2 caption here</div> -->
+        </div>
+
+      </div>
+
+
+        <!-- Video grid -->
+    <div class="video-grid">
+      <!-- 5 video blocks (5 × 1) -->
+
+          <div class="video-block">
+              <video controls autoplay muted loop>
+              <source src="static/assets/demo/BEV/22b.mp4" type="video/mp4">
+              </video>
+              <!-- <div class="figure-caption">Video 2 caption here</div> -->
+          </div>
+
+          <div class="video-block">
+              <video controls autoplay muted loop>
+              <source src="static/assets/demo/Ego/22b_r_color.mp4" type="video/mp4">
+              </video>
+              <!-- <div class="figure-caption">Video 1 caption here</div> -->
+          </div>
+      
+          <div class="video-block">
+              <video controls autoplay muted loop>
+              <source src="static/assets/demo/Ego/22b_l_color.mp4" type="video/mp4">
+              </video>
+              <!-- <div class="figure-caption">Video 2 caption here</div> -->
+          </div>
+
+          <div class="video-block">
+              <video controls autoplay muted loop>
+              <source src="static/assets/demo/GT/22b.mp4" type="video/mp4">
+              </video>
+              <!-- <div class="figure-caption">Video 2 caption here</div> -->
+          </div>
+
+          <div class="video-block">
+            <video controls autoplay muted loop>
+            <source src="static/assets/demo/inference/22b.mp4" type="video/mp4">
+            </video>
+            <!-- <div class="figure-caption">Video 2 caption here</div> -->
+        </div>
+
+      </div>
+
+
       
   </div>
 
 
   <div class="content">
-    <h2 style="text-align:center;">Abstract</h2>
-    <p>
-      We present <b>STream3R</b>, a novel approach to 3D reconstruction that reformulates pointmap prediction as a decoder-only Transformer problem. Existing state-of-the-art methods for multi-view reconstruction either depend on expensive global optimization or rely on simplistic memory mechanisms that scale poorly with sequence length. In contrast, <b>STream3R</b> introduces an streaming framework that processes image sequences efficiently using causal attention, inspired by advances in modern language modeling. By learning geometric priors from large-scale 3D datasets, <b></b>STream3R</b> generalizes well to diverse and challenging scenarios, including dynamic scenes where traditional methods often fail. Extensive experiments show that our method consistently outperforms prior work across both static and dynamic scene benchmarks. Moreover, <b>STream3R</b> is inherently compatible with LLM-style training infrastructure, enabling efficient large-scale pretraining and fine-tuning for various downstream 3D tasks. Our results underscore the potential of causal Transformer models for online 3D perception, paving the way for real-time 3D understanding in streaming environments.
-    </p>
-    <img class="summary-img" src="static/assets/teaser.png" style="width:90%;">
-  </div>
-
-  <div class="content">
     <h2 style="text-align:center;">Method</h2>
-    <p>
-      Built on a causal transformer, STREAM3R processes streaming images
-      sequentially for 3D reconstruction. Each input image is first tokenized using a shared-weight ViT
-      encoder, and the resulting tokens are passed to our causal decoder. Each decoder layer begins with
-      frame-wise self-attention. For subsequent views, the model applies causal attention to the memory 
-      tokens cached from previous observations. The outputs include point maps along with confidence maps in both world and camera
-      coordinate systems, as long as the camera pose as shown on the right.
+    <p style="text-align:center;">
+      Detailed architecture of the StereoAdapter: (a) two-stage self-supervised training pipeline; (b) update mechanism with LoRA.
     </p>
-    <br>
-    <img class="summary-img" src="static/assets/pipeline.png" style="width:90%;">
-    <h4>
-      <center>Method Overview of STream3R.</center>
-    </h4>
+    <img class="summary-img" src="static/assets/flow.jpg" style="width:90%;">
   </div>
 
+
+
   <div class="content">
+    <h2 style="text-align:center;">Benchmark Results</h2>
+    <p style="text-align:center;">
+      Visualization results of Stereo Depth Estimation Methods on SQUID and TartanAir.
+    </p>
+    <img class="summary-img" src="static/assets/result.jpg" style="width:90%;">
+  </div>
+
+
+  <div class="content">
+    <h2 style="text-align:center;">UW-StereoDepth-40K</h2>
+    <p style="text-align:center;">
+      Example from the high-quality UW-StereoDepth-40K dataset.
+    </p>
+    <img class="summary-img" src="static/assets/data.jpg" style="width:90%;">
+  </div>
+
+
+
+  <!-- <div class="content">
     <h2>BibTex</h2>
     <code> @article{stream3r2025,<br>
   &nbsp;&nbsp;title={STream3R: Scalable Sequential 3D Reconstruction with Causal Transformer},<br>
@@ -131,7 +524,7 @@
   &nbsp;&nbsp;booktitle={arXiv preprint arXiv:2508.10893},<br>
   &nbsp;&nbsp;year={2025}<br>
   } </code>
-  </div>
+  </div> -->
 
   <div class="content">
     <p style="text-align:center"><strong>StereoAdapter: Adapting Stereo Depth Estimation to Underwater Scenes</strong></p>
