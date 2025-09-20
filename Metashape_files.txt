@@ -1,0 +1,26 @@
+1.使用30余个tag，粘贴在pipe frame上的
+
+原始图片：https://unisydneyedu-my.sharepoint.com/:f:/g/personal/ytia0661_uni_sydney_edu_au/Em6eIw60P3ZGkZBCh9I12DgBir1qZMzFkQerAMgWWnqiWA?e=wH7omJ
+400张图片，以及该部分的tagslam结果：https://unisydneyedu-my.sharepoint.com/:f:/g/personal/ytia0661_uni_sydney_edu_au/EjqYb6r5Bk5HqqZZTsYn7YsBF7_Ss3Oe0dYwBP-2BY2ZTw?e=v6E4nL
+全部的tagslam结果，以及原始文件的bag：https://unisydneyedu-my.sharepoint.com/:f:/g/personal/ytia0661_uni_sydney_edu_au/EgHLVYbBxYhOrZ6Y3E7UJYgBJKCbOW6g8Tb2ymojkcTK5A?e=zRSp3h
+metashape建模：https://unisydneyedu-my.sharepoint.com/:f:/g/personal/ytia0661_uni_sydney_edu_au/EuVZJcppclpEh8ipoTalJ3cBzW6rg08omUYeM2hFoLTXxw?e=THqvkJ
+
+
+2.在板上贴tag，陆地建模
+原始图片：https://unisydneyedu-my.sharepoint.com/:f:/g/personal/ytia0661_uni_sydney_edu_au/EuKN9ZBC6phEhGO9YxrS25sBIgz5DJTdYFBQsap5JpnWag?e=KNbNII
+400张图片，及全部tagslam结果，以及原始文件的bag：https://unisydneyedu-my.sharepoint.com/:f:/g/personal/ytia0661_uni_sydney_edu_au/EuvN_3GMbglLmvaz-JoQJwgB-S6jKDbvwi4rQYp7OVw9iA?e=EM2ouR
+metashape建模：https://unisydneyedu-my.sharepoint.com/:f:/g/personal/ytia0661_uni_sydney_edu_au/Ehf-O5rsHoBIngoT2yPJ09wBhLHWVhQw_Y_XyvWEtAupPA?e=GqAQuU
+svo文件：https://unisydneyedu-my.sharepoint.com/:u:/g/personal/ytia0661_uni_sydney_edu_au/ESPyyJO8OQ9Jm1UobjrFncQBlIiA8VAyZJQM1D0onqTJ4g?e=8ubs29
+
+
+3.水下建模
+第一次水下实验原始图片：https://unisydneyedu-my.sharepoint.com/:f:/g/personal/ytia0661_uni_sydney_edu_au/EugYzLxJRXlNowZExcf9McUBN5t2uyTVwiSgwpTJZ5IrDg?e=aCxnhU
+第一次水下建模，400张图片，及部分tagslam结果，及全部三次的原始文件bag：https://unisydneyedu-my.sharepoint.com/:f:/g/personal/ytia0661_uni_sydney_edu_au/Em6E0E9J785Equ6rd2eiehoBL3OWZBwtonCC341NRI10Kw?e=uShTuA
+metashape建模：https://unisydneyedu-my.sharepoint.com/:f:/g/personal/ytia0661_uni_sydney_edu_au/Ehf-O5rsHoBIngoT2yPJ09wBhLHWVhQw_Y_XyvWEtAupPA?e=DIWzDo
+第二次水下实验原始图片：https://unisydneyedu-my.sharepoint.com/:f:/g/personal/ytia0661_uni_sydney_edu_au/ElPGELbMDyVKnHBJq_C8qQgBHGuuPPyWwXPvxdr3GlitkA?e=1ueRwl
+第三次水下实验原始图片：https://unisydneyedu-my.sharepoint.com/:f:/g/personal/ytia0661_uni_sydney_edu_au/Ev_AYmqc3glBjgtLXtVHZhEBesl79T5msylcQPzqBbMROg?e=3S53XD
+
+第三次摄像的原始文件bag，中间的两个分文件：
+ac：https://drive.google.com/file/d/1J5aAcQu_bPy8VP7jCb7BtW3BhB4isH4k/view?usp=drive_link
+ab: https://drive.google.com/file/d/1P5FxusIHKvC89pTFP9ht6SO_mY89w7P8/view?usp=sharing
+
