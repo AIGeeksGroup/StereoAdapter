@@ -3,7 +3,7 @@
 This is the official repository for the paper:
 > **StereoAdapter: Adapting Stereo Depth Estimation to Underwater Scenes**
 >
-> Zhengri Wu<sup>1</sup>* · Yiran Wang<sup>1</sup>* · Yu Wen<sup>1</sup>* · Zeyu Zhang<sup>2</sup>*<sup>†</sup> · Biao Wu<sup>3</sup> · Hao Tang<sup>2</sup><sup>‡</sup>  
+> Zhengri Wu<sup>1</sup>* · [Yiran Wang](https://github.com/u7079256)<sup>1</sup>* · Yu Wen<sup>1</sup>* · [Zeyu Zhang](https://steve-zeyu-zhang.github.io/)<sup>2</sup>*<sup>†</sup> · Biao Wu<sup>3</sup> · [Hao Tang](https://ha0tang.github.io/)<sup>2</sup><sup>‡</sup>  
 > <sup>1</sup>Australian Centre for Robotics <sup>2</sup>Peking University <sup>3</sup>Australian Artificial Intelligence Institute  
 > *Equal contribution. <sup>†</sup>Project lead. <sup>‡</sup>Corresponding author: bjdxtanghao@gmail.com.
 >
