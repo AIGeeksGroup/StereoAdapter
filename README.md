@@ -23,7 +23,7 @@ https://github.com/user-attachments/assets/7c3c656c-ea00-4b7c-8f24-f4294b84628f
 ## TODO List
 
 
-- [x] Release UW-StereoDepth-40K. (see [UW-StereoDepth-40K](https://huggingface.co/datasets/AIGeeksGroup/Scene-30K))
+- [x] Release UW-StereoDepth-40K. (see [UW-StereoDepth-40K]
 - [ ] Upload our paper to arXiv and build project pages.
 - [ ] Upload the pretrained model.
 - [ ] Upload the code.
