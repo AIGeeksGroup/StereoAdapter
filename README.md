@@ -7,7 +7,7 @@ This is the official repository for the paper:
 > <sup>1</sup>Australian Centre for Robotics <sup>2</sup>Peking University <sup>3</sup>Australian Artificial Intelligence Institute  
 > *Equal contribution. <sup>†</sup>Project lead. <sup>‡</sup>Corresponding author: bjdxtanghao@gmail.com.
 >
-> ### Paper (coming soon) | [Website](https://aigeeksgroup.github.io/StereoAdapter/) | [Code](https://github.com/AIGeeksGroup/StereoAdapter)
+> ### Paper (coming soon) | [Website](https://aigeeksgroup.github.io/StereoAdapter/) 
 
 > [!NOTE]
 > 💪 This visualizations brief introduce and show the real world deployment of StereoAdapter.
@@ -15,6 +15,18 @@ This is the official repository for the paper:
 
 https://github.com/user-attachments/assets/7c3c656c-ea00-4b7c-8f24-f4294b84628f
 
+## ✏️ Citation
+
+## 🏃 Intro StereoAdapter
+
+
+## TODO List
+
+
+- [x] Release UW-StereoDepth-40K. (see [UW-StereoDepth-40K](https://huggingface.co/datasets/AIGeeksGroup/Scene-30K))
+- [ ] Upload our paper to arXiv and build project pages.
+- [ ] Upload the pretrained model.
+- [ ] Upload the code.
 
 
 
