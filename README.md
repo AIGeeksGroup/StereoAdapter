@@ -31,7 +31,7 @@ If you find our code or paper helpful, please consider starring ⭐ us and citin
 ## TODO List
 
 
-- [x] Release UW-StereoDepth-40K. (see [UW-StereoDepth-40K](https://huggingface.co/yiranranranra/my_dataset/blob/main/squid.zip))
+- [x] Release UW-StereoDepth-40K. (see [UW-StereoDepth-40K](https://huggingface.co/datasets/AIGeeksGroup/UW-StereoDepth-40K))
 - [ ] Upload our paper to arXiv and build project pages.
 - [ ] Upload the pretrained model.
 - [ ] Upload the code.
