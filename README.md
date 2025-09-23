@@ -12,7 +12,6 @@ This is the official repository for the paper:
 > [!NOTE]
 > 💪 This visualizations brief introduce and show the real world deployment of StereoAdapter.
 
-
 https://github.com/user-attachments/assets/7c3c656c-ea00-4b7c-8f24-f4294b84628f
 
 ## ✏️ Citation
@@ -30,21 +29,18 @@ If you find our code or paper helpful, please consider starring ⭐ us and citin
 
 ## TODO List
 
-
-- [x] Release UW-StereoDepth-40K. (see [UW-StereoDepth-40K](https://huggingface.co/datasets/AIGeeksGroup/UW-StereoDepth-40K))
-- [ ] Upload our paper to arXiv and build project pages.
-- [ ] Upload the pretrained model.
-- [ ] Upload the code.
+- ✅ Release UW-StereoDepth-40K. (see [UW-StereoDepth-40K](https://huggingface.co/datasets/AIGeeksGroup/UW-StereoDepth-40K))
+- ⬜️ Upload our paper to arXiv and build project pages.
+- ⬜️ Upload the pretrained model.
+- ⬜️ Upload the code.
 
 ## 🏃 Intro StereoAdapter
 
-
-
 ## 🔧Run Your StereoAdapter
-
 
 ### 1. Install & Requirements
 
 ```bash
-
+conda env create -f environment.yaml
+conda activate stereoadapter
 ```
