@@ -5,7 +5,7 @@ This is the official repository for the paper:
 >
 > Zhengri Wu\*, [Yiran Wang](https://github.com/u7079256)\*, Yu Wen\*, [Zeyu Zhang](https://steve-zeyu-zhang.github.io/)\*<sup>†</sup>, Biao Wu, and [Hao Tang](https://ha0tang.github.io/)<sup>‡</sup>  
 >
-> *Equal contribution. <sup>†</sup>Project lead. <sup>‡</sup>Corresponding author: bjdxtanghao@gmail.com.
+> *Equal contribution. <sup>†</sup>Project lead. <sup>‡</sup>Corresponding author.
 >
 > ### [Paper](https://arxiv.org/abs/2509.16415) | [Website](https://aigeeksgroup.github.io/StereoAdapter/) | [Dataset](https://huggingface.co/datasets/AIGeeksGroup/UW-StereoDepth-40K) | [Model](https://huggingface.co/AIGeeksGroup/StereoAdapter) | [HF Paper](https://huggingface.co/papers/2509.16415)
 
