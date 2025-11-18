@@ -1,0 +1,148 @@
+train_dataset:
+  params:
+    full_size: [462, 630]
+    random_resize: [1.5]
+    flip_mode: img
+    is_fixK: v2
+
+val_dataset:
+  params:
+    full_size: [462, 630]
+    stereo_test: True
+
+model:
+  type: TiO_Depth
+  params:
+    out_mode: ['Mono', 'Stereo', 'Refine']
+
+losses:
+  param_group1:
+    st_epoch: 1
+    _optim: options/_base/optimizers/adam.yaml
+    optim:
+      sched:
+        params:
+          milestones: [20, 30, 40, 45]
+    loss_terms:
+
+      Mono_Disp_L1:
+        type: PhotoLoss
+        rate: 1.0
+        mask: valid
+        args:
+          pred_n: mono_disp_0_o
+          target_n: gt_disp
+          l1_rate: 1.0
+          ssim_rate: 0.0
+
+      Mono_Grad:
+        type: GradLoss
+        rate: 0.01
+        mask: valid
+        args:
+          pred_n: mono_disp_0_o
+          target_n: gt_disp
+
+#      Mono_smooth:
+#        type: SmoothLoss
+#        rate: 0.0008
+#        args:
+#          pred_n: mono_disp_0_o
+#          image_n: color_o
+#          gamma_rate: 2
+#          more_kernel: True
+#          gray_img: True
+
+
+  param_group2:
+    st_epoch: 21
+    _optim: options/_base/optimizers/adam.yaml
+    optim:
+      sched:
+        params:
+          milestones: [30, 40, 45]
+    loss_terms:
+
+      Stereo_Disp_L1:
+        type: PhotoLoss
+        rate: 1.0
+        mask: valid
+        args:
+          pred_n: stereo_disp_0_s
+          target_n: gt_disp
+          l1_rate: 1.0
+          ssim_rate: 0.0
+
+      Stereo_Grad:
+        type: GradLoss
+        rate: 0.01
+        mask: valid
+        args:
+          pred_n: stereo_disp_0_s
+          target_n: gt_disp
+
+      Mono_Stereo_L1:
+        type: PhotoLoss
+        rate: 0.01
+        args:
+          pred_n: stereo_disp_0_s
+          target_n: mono_disp_0_s
+          l1_rate: 1.0
+          ssim_rate: 0.0
+
+      Mono_Stereo_Grad:
+        type: GradLoss
+        rate: 0.01
+        args:
+          pred_n: stereo_disp_0_s
+          target_n: mono_disp_0_s
+
+#      Stereo_smooth:
+#        type: SmoothLoss
+#        rate: 0.008
+#        args:
+#          pred_n: stereo_disp_0_s
+#          image_n: color_s
+#          gamma_rate: 2
+#          more_kernel: True
+#          gray_img: True
+
+visual:
+  type:
+    color_s: img
+    color_o: img
+    mono_disp_0_s: disp
+    stereo_disp_0_s: disp
+
+    depth: depth
+
+    fused_occ_color_s: img
+    mono_occ_mask_s: mask
+    plane_mask_s: mask
+
+    fuse_disp_s: disp
+    fuse_proj_img_o_0_s: img
+    refmono_disp_0_s: disp
+    refmono_proj_img_o_0_s: img
+
+    cost_disp_3-s: disp
+    cost_disp_3-o: disp
+    cost_disp_2-s: disp
+    cost_disp_2-o: disp
+    cost_disp_1-s: disp
+    cost_disp_1-o: disp
+
+    Refine_hints/s: error_heat
+
+  shape: [[color_s, color_o],
+          [mono_disp_0_s, stereo_disp_0_s],
+          [depth, fuse_disp_s],
+          [refmono_disp_0_s, refmono_proj_img_o_0_s],
+          [cost_disp_3-s, cost_disp_3-o],
+          [cost_disp_2-s, cost_disp_2-o],
+          [cost_disp_1-s, cost_disp_1-o],
+          [Refine_hints/s, plane_mask_s]]
+
+_train: options/_base/datasets/tartanair/train_occ.yaml
+_val: options/_base/datasets/tartanair/test_occ.yaml
+_base: options/_base/networks/dav2_vmamba_codyra.yaml

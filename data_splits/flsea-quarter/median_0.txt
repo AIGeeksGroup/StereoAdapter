@@ -1,0 +1,4 @@
+/home/ywan0794/TiO-Depth_pytorch-main/flsea-stereo/canyon2/canyon2/depth/RGT/RGT_03_014058_abs_depth.tif
+/home/ywan0794/TiO-Depth_pytorch-main/flsea-stereo/canyon2/canyon2/depth/LFT/LFT_03_014118_abs_depth.tif
+/home/ywan0794/TiO-Depth_pytorch-main/flsea-stereo/canyon2/canyon2/depth/LFT/LFT_03_014130_abs_depth.tif
+/home/ywan0794/TiO-Depth_pytorch-main/flsea-stereo/canyon2/canyon2/depth/LFT/LFT_03_014124_abs_depth.tif

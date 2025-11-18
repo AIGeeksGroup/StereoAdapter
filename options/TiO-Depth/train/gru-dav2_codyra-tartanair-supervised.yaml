@@ -1,0 +1,158 @@
+train_dataset:
+  params:
+    full_size: [462, 630]
+    random_resize: [1.5]
+    flip_mode: img
+    is_fixK: v2
+
+val_dataset:
+  params:
+    full_size: [462, 630]
+    stereo_test: True
+
+model:
+  type: TiO_Depth
+  params:
+    out_mode: ['Mono', 'Stereo', 'Refine']
+
+losses:
+  # ==================== 单目阶段：GT监督 ====================
+  param_group1:
+    st_epoch: 1
+    _optim: options/_base/optimizers/adam.yaml
+    optim:
+      sched:
+        params:
+          milestones: [20, 30, 40, 45]
+    loss_terms:
+      # 核心：单目disparity L1 监督
+      Mono_Disp_L1:
+        type: PhotoLoss
+        rate: 1.0
+        args:
+          pred_n: mono_disp_0_s
+          target_n: gt_disp
+          l1_rate: 1.0
+          ssim_rate: 0.0
+
+      # 梯度监督（保留边缘细节）
+      Mono_Grad:
+        type: GradLoss
+        rate: 0.01
+        args:
+          pred_n: mono_disp_0_s
+          target_n: gt_disp
+
+      # 平滑正则化（可选，去噪）
+      Mono_smooth:
+        type: SmoothLoss
+        rate: 0.0008
+        args:
+          pred_n: mono_disp_0_o
+          image_n: color_o
+          gamma_rate: 2
+          more_kernel: True
+          gray_img: True
+
+  # ==================== 双目阶段：GT监督 + 单双目一致性 ====================
+  param_group2:
+    st_epoch: 21
+    _optim: options/_base/optimizers/adam.yaml
+    optim:
+      sched:
+        params:
+          milestones: [30, 40, 45]
+    loss_terms:
+      # 核心：双目disparity L1 监督
+      Stereo_Disp_L1:
+        type: PhotoLoss
+        rate: 1.0
+        args:
+          pred_n: stereo_disp_0_s
+          target_n: gt_disp
+          l1_rate: 1.0
+          ssim_rate: 0.0
+
+      # 双目梯度监督
+      Stereo_Grad:
+        type: GradLoss
+        rate: 0.01
+        args:
+          pred_n: stereo_disp_0_s
+          target_n: gt_disp
+
+      # 单目-双目 L1 一致性（利用单目先验）
+      Mono_Stereo_L1:
+        type: PhotoLoss
+        rate: 0.05
+        args:
+          pred_n: stereo_disp_0_s
+          target_n: mono_disp_0_s
+          l1_rate: 1.0
+          ssim_rate: 0.0
+
+      # 单目-双目梯度一致性
+      Mono_Stereo_Grad:
+        type: GradLoss
+        rate: 0.01
+        args:
+          pred_n: stereo_disp_0_s
+          target_n: mono_disp_0_s
+
+      # 平滑正则化
+      Stereo_smooth:
+        type: SmoothLoss
+        rate: 0.001
+        args:
+          pred_n: stereo_disp_0_s
+          image_n: color_s
+          gamma_rate: 2
+          more_kernel: True
+          gray_img: True
+
+visual:
+  type:
+    # 输入图像
+    color_s: img
+    color_o: img
+
+    # 深度预测
+    mono_disp_0_s: disp
+    stereo_disp_0_s: disp
+
+    # GT深度（用于对比）
+    depth: disp
+
+    # 遮挡处理
+    fused_occ_color_s: img
+    mono_occ_mask_s: mask
+    plane_mask_s: mask
+
+    # 融合与refine
+    fuse_disp_s: disp
+    fuse_proj_img_o_0_s: img
+    refmono_disp_0_s: disp
+    refmono_proj_img_o_0_s: img
+
+    # Cost volume可视化
+    cost_disp_3-s: disp
+    cost_disp_3-o: disp
+    cost_disp_2-s: disp
+    cost_disp_2-o: disp
+    cost_disp_1-s: disp
+    cost_disp_1-o: disp
+
+    Refine_hints/s: error_heat
+
+  shape: [[color_s, color_o],
+          [mono_disp_0_s, stereo_disp_0_s],
+          [depth, fuse_disp_s],
+          [refmono_disp_0_s, refmono_proj_img_o_0_s],
+          [cost_disp_3-s, cost_disp_3-o],
+          [cost_disp_2-s, cost_disp_2-o],
+          [cost_disp_1-s, cost_disp_1-o],
+          [Refine_hints/s, plane_mask_s]]
+
+_train: options/_base/datasets/tartanair/train_occ.yaml
+_val: options/_base/datasets/tartanair/test_occ.yaml
+_base: options/_base/networks/dav2_gru_codyra.yaml
