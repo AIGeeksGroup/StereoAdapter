@@ -3,7 +3,6 @@ __pycache__/
 .ipynb_checkpoints/
 data/
 dataset/
-datasets/
 checkpoints/
 weights/
 *.pt
