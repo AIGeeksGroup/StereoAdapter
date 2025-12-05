@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from timm.models.layers import trunc_normal_
-from mmcv.ops.deform_conv import DeformConv2dFunction
+#from mmcv.ops.deform_conv import DeformConv2dFunction
 
 class DPDecoder(nn.Module):
     def __init__(self,
@@ -242,6 +242,7 @@ class DPDecoder(nn.Module):
         x_s = features[-1]
         idx_feats = self.num_enc_feats - 1
         for i in range(self.num_layers, -1, -1):
+            """
             if i in self.db_scales and with_mo and self.db_mode == 'DeformConv':
                 offset = self.convblocks[("midout", i, 0)](x_s)
                 deform_conv2d = DeformConv2dFunction.apply
@@ -254,9 +255,9 @@ class DPDecoder(nn.Module):
                                     self.convblocks[("midout", i, 0)].deform_groups)
                 x_s = self.convblocks[("dec", i, 0)](x_s, wo_conv=True)
             else:
-                
+            """   
                 #a == 0 
-                x_s = self.convblocks[("dec", i, 0)](x_s)
+            x_s = self.convblocks[("dec", i, 0)](x_s)
 
             if idx_feats >= 0:
                 tar_shape = features[idx_feats].shape
@@ -292,7 +293,7 @@ class DPDecoder(nn.Module):
 
                 idx_feats -= 1
             x_s = torch.cat(x_s, 1)
-
+            """
             if i in self.db_scales and with_mo and self.db_mode == 'DeformConv':
                 print("DEFORM=================")
                 offset = self.convblocks[("midout", i, 1)](x_s)
@@ -307,7 +308,8 @@ class DPDecoder(nn.Module):
                 x_s = self.convblocks[("dec", i, 1)](x_s, wo_conv=True)
 
             else:
-                x_s = self.convblocks[("dec", i, 1)](x_s)  
+            """
+            x_s = self.convblocks[("dec", i, 1)](x_s)  
             
             if i == 0:
                 out_disp = self.convblocks[("out", i)](x_s)
