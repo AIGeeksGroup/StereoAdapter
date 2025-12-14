@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=tiodepth-dav2-melo          # 作业名
+#SBATCH --job-name=dav2-gru          # 作业名
 #SBATCH --output=pure_%j.log        # 输出日志文件，%j是作业ID
 #SBATCH --error=pure_%j.log          # 错误日志文件，%j是作业ID
 #SBATCH --open-mode=append            # 立即打开日志文件
@@ -20,10 +20,10 @@ cd $SLURM_SUBMIT_DIR
 # 初始化并激活conda环境
 # 不要直接使用conda init (它是用于修改shell配置文件的)
 # 而是直接source conda.sh文件
-source /home/ywan0794@acfr.usyd.edu.au/miniconda3/etc/profile.d/conda.sh
+source /home/ywan0794/miniconda3/etc/profile.d/conda.sh
 
 # 激活gpupytorch环境
-conda activate tiodepth
+conda activate stereoadapter
 
 # 确认conda环境已激活
 echo "Activated conda environment: $CONDA_DEFAULT_ENV"

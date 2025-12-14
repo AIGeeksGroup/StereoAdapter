@@ -44,3 +44,18 @@ If you find our code or paper helpful, please consider starring ⭐ us and citin
 conda env create -f environment.yaml
 conda activate stereoadapter
 ```
+
+### 2. Download Pertrained Depth Anything V2 Model
+
+```bash
+mkdir -p Depth-Anything-V2/checkpoints
+cd Depth-Anything-V2/checkpoints
+wget https://huggingface.co/depth-anything/Depth-Anything-V2-Base/resolve/main/depth_anything_v2_vitb.pth
+cd ../..
+```
+
+### 3. Train StereoAdapter Model
+
+```bash
+python train_dist_2.py --name MODEL_NAME --exp_opts options/TiO-Depth/train/gru-dav2_codyra-tartanair.yaml --batch_size BATH_SIZE --metric_source rawdepth sdepth --save_freq SAVE_FREQUENCY --visual_freq VISUAL_FREQUENCY --is_codyra True --step_epochs 20 30
+```

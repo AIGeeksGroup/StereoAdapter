@@ -16,3 +16,4 @@ logs/
 .env
 *.log
 .DS_Store
+path_my.py
