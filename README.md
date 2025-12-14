@@ -57,5 +57,21 @@ cd ../..
 ### 3. Train StereoAdapter Model
 
 ```bash
-python train_dist_2.py --name MODEL_NAME --exp_opts options/TiO-Depth/train/gru-dav2_codyra-tartanair.yaml --batch_size BATH_SIZE --metric_source rawdepth sdepth --save_freq SAVE_FREQUENCY --visual_freq VISUAL_FREQUENCY --is_codyra True --step_epochs 20 30
+python train_dist_2.py\
+  --name MODEL_NAME\
+  --exp_opts options/TiO-Depth/train/gru-dav2_codyra-tartanair.yaml\
+  --batch_size BATH_SIZE\ 
+  --metric_source rawdepth sdepth\ 
+  --save_freq SAVE_FREQUENCY\ 
+  --visual_freq VISUAL_FREQUENCY\ 
+  --is_codyra True\ 
+  --step_epochs 20 30
+```
+
+### 4. Evaluate StereoAdapter
+
+```bash
+python evaluate.py\
+ --exp_opts options/TiO-Depth/train/gru-dav2_codyra-tartanair.yaml\
+ --model_path MODEL_PATH
 ```
