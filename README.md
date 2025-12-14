@@ -32,7 +32,7 @@ If you find our code or paper helpful, please consider starring ⭐ us and citin
 - ✅ Release UW-StereoDepth-40K. (see [UW-StereoDepth-40K](https://huggingface.co/datasets/AIGeeksGroup/UW-StereoDepth-40K))
 - ⬜️ Upload our paper to arXiv and build project pages.
 - ⬜️ Upload the pretrained model.
-- ⬜️ Upload the code.
+- ✅ Upload the code.
 
 ## 🏃 Intro StereoAdapter
 
