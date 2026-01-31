@@ -7,6 +7,8 @@ This is the official repository for the paper:
 >
 > *Equal contribution. <sup>†</sup>Project lead. <sup>‡</sup>Corresponding author.
 >
+> ***ICRA 2026***
+>
 > ### [Paper](https://arxiv.org/abs/2509.16415) | [Website](https://aigeeksgroup.github.io/StereoAdapter/) | [Dataset](https://huggingface.co/datasets/AIGeeksGroup/UW-StereoDepth-40K) | [Model](https://huggingface.co/AIGeeksGroup/StereoAdapter) | [HF Paper](https://huggingface.co/papers/2509.16415)
 
 > [!NOTE]
