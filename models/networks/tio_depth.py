@@ -889,6 +889,11 @@ class TiO_Depth(Base_of_Model):
                         if k.startswith('1._convs.') and k[9:11] in dec_module_idxs:
                             group_dict['DE'] += [v]
                         group_dict['BB'] += [v]
+
+            if 'gru' in self.net_module:
+                for p in self.net_module['gru'].parameters():
+                    if p.requires_grad:
+                        group_dict['DE'].append(p)
             
             all_group = {}
             group1_list = [group_dict[k] for k in g1_dict.keys()]
