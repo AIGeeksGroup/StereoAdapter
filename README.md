@@ -29,6 +29,11 @@ If you find our code or paper helpful, please consider starring ⭐ us and citin
 }
 ```
 
+## News
+
+- [2026/02/17] 🎉 We just released [**StereoAdapter-2**](https://aigeeksgroup.github.io/StereoAdapter-2/)!
+- [2026/01/31] 🎉 Glad to announce that **StereoAdapter** has been accepted to **ICRA 2026**!
+
 ## TODO List
 
 - ✅ Release UW-StereoDepth-40K. (see [UW-StereoDepth-40K](https://huggingface.co/datasets/AIGeeksGroup/UW-StereoDepth-40K))
